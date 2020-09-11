@@ -1,0 +1,27 @@
+class PushDominoes {
+    public String pushDominoes(String d) {
+      d="L"+d+"R";
+        char [] arr=d.toCharArray();
+        int i=0,len=arr.length,j=0;
+        
+        while(i<len-1)
+        {
+            j=i+1;
+            while(j<len && arr[j]=='.')
+                j++;
+            if(arr[i]==arr[j])
+            {
+               Arrays.fill(arr,i,j,arr[i]);   
+            }
+            else if(arr[i]=='R' && arr[j]=='L')
+            {
+             int chain=(j-i-1)/2;
+               Arrays.fill(arr,i,i+chain+1,'R'); 
+              Arrays.fill(arr,j-chain,j+1,'L'); 
+
+            }
+            i=j;
+        }
+        return new String(Arrays.copyOfRange(arr,1,len-1));
+     }
+}
