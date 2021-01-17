@@ -1,0 +1,1 @@
+P is a point in a triangle ABC such that it is 6, 8, 11 cm distance from all point A, B, C respectively. Find the parameter of the triangle.
