@@ -1,6 +1,5 @@
 
 public class BinarySearch {
-	//upperbound returns last element greater or equal to a given element
   static int upperbound(int [] arr,int low,int high,int ele)
   {
 	  while(low<high)
